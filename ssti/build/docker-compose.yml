@@ -1,0 +1,12 @@
+version: "2"
+services:
+  challenge:
+    build: .
+    image: template_injection
+    ports:
+      - "8081:8080"
+    environment:
+      - FLAG=hehe{f1rst_eAsy_1nj3cti0n}
+      - MODULE_NAME=app
+      - VARIABLE_NAME=app
+      - WORK_CLASS=gevent
